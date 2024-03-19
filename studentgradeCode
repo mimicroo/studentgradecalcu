@@ -1,0 +1,100 @@
+package javaFundamentals;
+
+import java.util.Scanner;
+
+public class MyjhsStudentCalcu {
+
+	public static void main(String[] args) {
+		// Variables ---------------------------------------------
+		
+		String name,yesno;
+		int English,Math,Science,Filipino,Mapeh,TLE,AP,ESP;
+		
+		double Calculation;
+		int sum;
+		double GWA = 8;
+		
+		Scanner scan = new Scanner(System.in);
+		
+		
+		// Greetings ------------------------------------------------
+		System.out.println("Welcome To Jazzer's Experiment Student Calculator");
+		System.out.println("May I Know Your Name?: ");
+		name = scan.next();
+		
+		System.out.println("\n" + "Hi " + name + " Lets Proceed to your Grades :) ");
+		System.out.println("---------------------------------------");
+		
+		// Subjects ------------------------------------------------
+		System.out.println("English Grade: ");
+		English = scan.nextInt();
+		
+        System.out.println("Math Grade: ");
+        Math = scan.nextInt();
+		
+		System.out.println("Science Grade: ");
+		Science = scan.nextInt();
+		
+		System.out.println("Filipino Grade: ");
+		Filipino = scan.nextInt();
+		
+		System.out.println("MAPEH Grade: ");
+		Mapeh = scan.nextInt();
+		
+		System.out.println("TLE Grade: ");
+		TLE = scan.nextInt();
+		
+		System.out.println("AP Grade: ");
+		AP = scan.nextInt();
+		
+		System.out.println("ESP Grade: ");
+		ESP = scan.nextInt();
+		
+		// Calculation -------------------------------------------
+		sum = (English + Math + Science + Filipino + Mapeh + TLE + AP + ESP);
+		Calculation = sum / GWA ;
+		
+		System.out.println("Your GWA is: " + Calculation);
+		System.out.println("---------------------------------------------------");
+		
+		// Ratings -----------------------------------------------
+		System.out.println("Are you interested to see what kind of Achievement did you get? ");
+		System.out.println("Select one of the following: Yes or No");
+		yesno = scan.next();
+		
+		if (yesno.equalsIgnoreCase("Yes")) {
+			System.out.println("Congratulations " + name );
+			
+			if (Calculation >=100) {
+				System.out.println("Invalid Grade");
+				
+			}else if (Calculation >=98) {
+				System.out.println("with Highest Honors");
+				
+			}else if (Calculation >=95) {
+				System.out.println("with High Honors");
+				
+			}else if (Calculation >=90) {
+				System.out.println("with honors");
+				
+			}else if (Calculation >=75) {
+				System.out.println("Passed");
+				
+			}else if (Calculation <75) {
+				System.out.println("Failed");
+			}
+			
+			
+			
+		   }else if (yesno.equalsIgnoreCase("No")) {
+			   System.out.println("Ok Then....... Byee");
+			   
+		} else if (yesno.equalsIgnoreCase(yesno)) {
+			System.out.println("Gagi Wala yan sa pag pipilian ano ka ba !!!!!!!!!!!!!!!!!");
+		}
+		
+		scan.close();
+
+	}
+
+}
